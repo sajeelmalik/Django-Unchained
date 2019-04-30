@@ -30,3 +30,11 @@ print("Expert status: " + str(expert_status))
 # f-strings are similar to template literals within javascript
 print(f"Expert status: {expert_status}")
 
+# Interesting stuff - operations
+
+print(42 / 8) # normal division
+
+print(42 // 8) # floor division
+
+print(23 ** 2) # exponentiation
+

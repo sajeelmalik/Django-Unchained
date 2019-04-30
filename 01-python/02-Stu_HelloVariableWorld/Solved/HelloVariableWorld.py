@@ -30,3 +30,12 @@ print(f"You make {daily_wage} per day")
 
 # With an f-string, print out whether the users were satisfied
 print(f"Are you satisfied with your current wage? {satisfied}")
+
+
+# BONUS
+
+# Using floor division, print an expression that resolves to `6` where none of the numbers are less than or equal to 10.
+print(134 // 20) # 6
+
+# Using exponentiation, print an expression that resolves to 225.
+print(15 ** 2) # 225
