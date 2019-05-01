@@ -1,4 +1,5 @@
 # A For loop moves through a given range of numbers
+
 # If only one number is provided it will loop from 0 to that number
 for x in range(10):
     print(x)

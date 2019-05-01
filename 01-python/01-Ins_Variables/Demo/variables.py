@@ -32,9 +32,12 @@ print(f"Expert status: {expert_status}")
 
 # Interesting stuff - operations
 
-print(42 / 8) # normal division
+ # Normal division
+print(42 / 8)
 
-print(42 // 8) # floor division
+# `Floor` division - we round DOWN to the nearest integer. A built-in Math.floor
+print(42 // 8) 
 
-print(23 ** 2) # exponentiation
+# Exponentiation - for (a ** b), we bring a to the exponent of b, or a^b
+print(23 ** 2) 
 

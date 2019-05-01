@@ -29,3 +29,11 @@
 
 
 # With an f-string, print out whether the users were satisfied
+
+
+# BONUS
+
+# Using floor division, print an expression that resolves to `6` where none of the numbers are less than 10.
+
+
+# Using exponentiation, print an expression that resolves to 225.
