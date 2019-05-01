@@ -14,7 +14,7 @@ hourly_wage = 1466195
 daily_wage = hourly_wage * 8
 
 # Create a variable called 'satisfied' that holds a boolean
-satisfied = True
+satisfied = False
 
 # Print out "Hello <name>!"
 print("Hello " + name + "!")
