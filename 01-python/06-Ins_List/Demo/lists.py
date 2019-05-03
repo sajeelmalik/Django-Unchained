@@ -6,7 +6,7 @@ print(myList)
 myList.append("Thor")
 myList.append("Thor")
 myList.append("Thor Nolan")
-myList += ["Black Widow"]
+# myList += ["Black Widow"]
 print(myList)
 
 # Returns the index of the first object with a matching value

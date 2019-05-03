@@ -8,7 +8,7 @@ Your challege should look pretty similar by now. You will need to make routes th
 
 * You will be conjuring 3 variable API routes that will make queries to your database based on the variable path
     * One that is able to take the name of a given house and returns all students in that house
-    * A second that takes a name of specific student and returns all information on that student
+    * A second that takes a name of specific student and ret
     * and finally a path that queries the database for 4 specific individuals, and renders a html template with their information
 
 * Run your server and interact with it to verify that you've used the right spells

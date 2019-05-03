@@ -1,6 +1,6 @@
 # Harry Potter and the Sorcerer's Flask
 
-You're an API wizard Harry! In this exercise you will be using `Flask` to create API routes that return json for a Python dictionary containing the name of Hogwarts students and their houses.
+You're an API wizard Harry! In this exercise you will be using `Flask` to create API routes that returns JSON for a Python dictionary containing the name of Hogwarts students and their houses.
 
 ## Instructions
 

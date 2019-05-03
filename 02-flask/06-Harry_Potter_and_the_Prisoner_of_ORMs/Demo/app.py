@@ -42,7 +42,7 @@ def index():
 
 @app.route("/api/v1.0/hogwarts-students/")
 def students():
-    #pymongo syntax for finding documents
+    # pymongo syntax for finding documents
     # converts the queried result into a list of dictionarys (aka a JSON)
     students = list(db.hogwarts.find())
     return jsonify(students)

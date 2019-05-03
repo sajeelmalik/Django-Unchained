@@ -15,6 +15,6 @@ The frontend and html templates have also been conjoured for you so your task is
 * Run your server and interact with it to verify that you've used the right spells
 
 
-## Hintsx
+## Hints
 
-* There are limitations to what you can conjure based on the API service you are using. In this **case** case-sensitivity is of the upmost importance when hitting your routes. You can either account for this within your code, or simple acknowledge it when you search for students.
+* There are limitations to what you can conjure based on the API service you are using. In this **case** case-sensitivity is of the utmost importance when hitting your routes. You can either account for this within your code, or simple acknowledge it when you search for students.

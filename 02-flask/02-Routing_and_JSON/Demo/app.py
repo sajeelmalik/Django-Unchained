@@ -22,7 +22,7 @@ app = Flask(__name__)
 # Flask Routes
 #################################################
 
-# In order for it to correctly render as JSON we must just jsonify
+# In order for it to correctly render as JSON we must use a simple Flask function - jsonify
 @app.route("/api/v1.0/justice-league")
 def justice_league():
     """Return the justice league data as json"""
@@ -46,7 +46,7 @@ def welcome():
         f"/api/v1.0/justice-league/Princess%20Diana"
     )
 
-# In Flask, the route paramter/path variable is wrapped within carrots as opposed to :pathVariable in express
+# In Flask, the route paramter/path variable is wrapped within carats as opposed to :pathVariable in express
 @app.route("/api/v1.0/justice-league/<real_name>")
 def justice_league_character(real_name):
     """Fetch the Justice League character whose real_name matches
@@ -61,6 +61,9 @@ def justice_league_character(real_name):
 
         if search_term == canonicalized:
             return jsonify(character)
+            # name = character["real_name"]
+            # return f"<h1>{name}</h1>"
+            
     # if the search term does not exist return an error
     return jsonify({"error": f"Character with real_name {real_name} not found."}), 404
 
