@@ -62,7 +62,7 @@ https://www.anaconda.com/download/#macos
 
 ### Database Connection to MySQL
 
-11. Open *settings.py* in our /app folder and comment out the existing entry for DATABASES. 
+11. Open `settings.py` in our `/app` folder and comment out the existing entry for DATABASES. 
 
 12. We want to use something more robust than SQLite, so we'll replace it with MySQL.
 
@@ -84,7 +84,7 @@ DATABASES = {
 
 ```
 
-14. Run this command in your Anaconda shell in your /app directory,
+14. Run this command in your Anaconda shell (or Terminal) in your /app directory,
 
 `python manage.py migrate`
 
@@ -115,3 +115,54 @@ INSTALLED_APPS = [
 ]
 
 ```
+
+20. In `urls.py`, add a path to your new app with the style of 
+
+`path('<name>/', include('<name>.urls')),`
+
+21. Make sure to import the include() function: `from django.urls import include, path`. 
+
+22. Create a `urls.py` folder in your new app and import the same libraries, as well as your views: `from . import views`. Set up the urlpatterns list and send the index view.
+
+```python
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+# this path defines the root <app_name> route - /app_name
+
+```
+
+### Create Views
+
+23. Navigate to your `views.py` file in your new app's folder. We want to define an index route as a function that takes in a request.
+
+```py
+def index(request):
+    return ''
+```
+
+24. Import HttpReponse with `from django.http import HttpResponse` and edit your return statement accordingly.
+    `return HttpResponse("Hello World")`
+
+### Templates
+
+25. However, we really want to create a template and send it to the frontend. Let's replace our return with this line:
+`    return render(request, "app_name/index.html")` and create folder structure of templates/<app_name>/index.html in your app. Insert any html elements in there, but don't include the head tags just yet.
+
+26. Create a `layout.html` in the same folder and include all of the required head tags, as well as CSS Frameworks or other JS import scripts you may need.
+
+27. In your `layout.html`, add the following snippet in the body, and additionally add it around your content in `index.html`:
+```
+    {% block content %}
+    {% endblock %}
+```
+The "content" can be renamed to anything, as long as it is consistent in both documents. This way, we can name different blocks of information to show on different areas of the page.
+
+28. Add this line at the top of your `index.html`: `{% extends '<app_name>/layout.html' %}`. This ensures that our HTML in `index.html` gets sent to the layout in `layout.html`.
+
+29. Back in our `views.py`, we can add a third argument to our render function: a dictionary. Add a dictionary with one key-value pair as the third argument, and in your `index.html`, render that key-value pair somewhere on the page with `{{ key }}`.
+
+### Busting Out Some Models
+
+
+
