@@ -41,14 +41,14 @@ https://www.anaconda.com/download/#macos
 - https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/
 
 
-2. `mkdir app`
+2. `mkdir app` -> OR, navigate into `01-First_Django_App`
 
 3. `conda create -n venv` (where we can choose another word instead of `venv`)
 
 4. `source activate venv` (to deactivate: `source deactivate`. to delete: `conda remove -n venv -all`)
   - or just `activate venv`
 
-5. `conda install -n venv <package>`
+5. `conda install -n venv <package>` (Not Needed)
 
 6. `conda install django`
 
@@ -112,7 +112,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
 
 ```
 
@@ -122,7 +121,7 @@ INSTALLED_APPS = [
 
 21. Make sure to import the include() function: `from django.urls import include, path`. 
 
-22. Create a `urls.py` folder in your new app and import the same libraries, as well as your views: `from . import views`. Set up the urlpatterns list and send the index view.
+22. Create a `urls.py` file in your new app and import the same libraries, as well as your views: `from . import views`. Set up the urlpatterns list and send the index view.
 
 ```python
 urlpatterns = [
@@ -147,7 +146,7 @@ def index(request):
 ### Templates
 
 25. However, we really want to create a template and send it to the frontend. Let's replace our return with this line:
-`    return render(request, "app_name/index.html")` and create folder structure of templates/<app_name>/index.html in your app. Insert any html elements in there, but don't include the head tags just yet.
+`    return render(request, "app_name/index.html")` and create folder structure of templates/*app_name*/index.html in your app. Insert any html elements in there, but don't include the head tags just yet.
 
 26. Create a `layout.html` in the same folder and include all of the required head tags, as well as CSS Frameworks or other JS import scripts you may need.
 
@@ -164,5 +163,60 @@ The "content" can be renamed to anything, as long as it is consistent in both do
 
 ### Busting Out Some Models
 
+30. Open `models.py` in your `app_name` directory.
 
+31. Instantiate a new class of your `app_name` and begin to generate the model rules. For Posts, here is an example:
+
+```python
+    class Posts(models.Model):
+        title = models.CharField(max_length=200)
+        body = models.TextField()
+        created_at = models.DateTimeField(default = datetime.now, blank = True)
+
+```
+
+32. We will have to create migrations based on this new model to create a table in our database. In the command line, 
+
+`python manage.py makemigrations <app_name>`
+
+- You may get an error if you fail to input the EXACT name of your app folder.
+
+33. To run it and create the database table, run `python manage.py migrate`. Check the database to confirm that the table was created.
+
+34. Run the server and head to the `/admin` route and log in. Before the model will show up, you must import and register your models in your `admin.py` file in your /*app_name* folder. Here's an example following the Post model:
+
+```python
+    from .models import Posts
+    admin.site.register(Posts)
+```
+
+You should now be able to see your models in the admin page and can add Posts from the admin page itself.
+
+35. If your model gets pluralized, you can define a `class Meta` in your model.
+
+### Displaying Your Data on your Views
+
+36. In your `views.py`, let's import the model you just created with `from .models import <model_name>`. Inside of the index function, we're going to instantiate a variable equal to all of the objects stored under that model paradigm in the database.
+
+`posts = Posts.objects.all()    ` the [:10] indicates that we'll take the first 10 items of the list.
+
+37. Pass the `post` object to the render function, but to be more precise, we will set it up just like handlebars.
+
+```python
+content = {
+    'title' : 'My First Django app',
+    'posts': posts
+}
+
+```
+
+38. Now, let's go back to our `index.html` and inside the block content, we will iterate through the data that we send and dynamically generate it with a for loop:
+
+```python
+    {% for post in posts %}
+
+    {% endfor %}
+```
+
+39. To get one specific post, we can create a new url in `urls.py`, following the same convention as before. Then, we'll create a new function inside our `views.py` that takes in two arguments, request and id.
 
