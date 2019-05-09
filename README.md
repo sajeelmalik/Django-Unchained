@@ -36,10 +36,23 @@ Given an overview of Flask, students should be able to:
 
 ## Django
 
+### Goals
+Following the detailed instructions, developers should be able to:
 
+- Initialize a Django project with all of the initial dependencies
+
+- Understand the importance and utility of virtual environments for Python projects
+
+- Create a *superuser* to access the Admin portal built into Django
+
+- Connect a database to a Django project and use the admin portal to add data items
+
+- Generate routes, views, and templates to dynamically create page elements 
+
+- Send data to their views and templates, both basically and iteratively 
 
 
 ## *Developers*
 
-Jimmy Tu - *initial work*   
-Sajeel Malik - update Python programming; add additional notes and content for Flask; create Django modules 
+Jimmy Tu - *initial work* - create detailed Python and Flask activities
+Sajeel Malik - update Python programming; add additional notes and content for Flask; create Django modules and write Django instructions

@@ -198,7 +198,7 @@ You should now be able to see your models in the admin page and can add Posts fr
 
 36. In your `views.py`, let's import the model you just created with `from .models import <model_name>`. Inside of the index function, we're going to instantiate a variable equal to all of the objects stored under that model paradigm in the database.
 
-`posts = Posts.objects.all()    ` the [:10] indicates that we'll take the first 10 items of the list.
+`posts = Posts.objects.all()` the [:10] indicates that we'll take the first 10 items of the list.
 
 37. Pass the `post` object to the render function, but to be more precise, we will set it up just like handlebars.
 
