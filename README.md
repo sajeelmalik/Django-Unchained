@@ -33,6 +33,12 @@ Given an overview of Flask, students should be able to:
 
 - Connect the Flask app to a local database (in this case, Mongo)
 
+#### Practice Modules
+ * 03-Harry_Potter_and_the_Sorcerers_Flask
+ * 05-Harry_Potter_and_the_Chamber_of_APIs
+ * 06-Harry_Potter_and_the_Prisonder_of_ORMs
+ * 07-Harry_Potter_and_the_Flask_of_Fire
+
 
 ## Django
 
@@ -54,5 +60,5 @@ Following the detailed instructions, developers should be able to:
 
 ## *Developers*
 
-Jimmy Tu - *initial work* - create detailed Python and Flask activities
+Jimmy Tu - *initial work* - create detailed Python and Flask activities                    
 Sajeel Malik - update Python programming; add additional notes and content for Flask; create Django modules and write Django instructions
