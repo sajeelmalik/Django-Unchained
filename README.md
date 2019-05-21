@@ -14,7 +14,7 @@ Given an installation of Python 3.7, students should be able to:
 - Use Python's OOP features to define classes and instantiate objects.
 
 ### Notes
-This lesson provides cursory coverage of the language, and entails numerous omissions of essential concepts. These omissions are known and intentional. The point is that students should get enough to continue to experiment with the language. This will not be "most of the language," but rather a brief opener. This lecture and demo series serves as just an introductory overview.
+This lesson provides cursory coverage of the language, and entails numerous omissions of essential concepts. These omissions are known and intentional. The point is that students should get enough to continue to experiment with the language. This will not be "most of the language," but rather a brief opener. This lecture and demo series serve as just an introductory overview.
 
 #### Useful Modules for Practice 
  * 08-Stu_KidInCandyStore
