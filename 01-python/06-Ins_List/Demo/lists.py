@@ -3,14 +3,14 @@ myList = ["Tony Stark", 25, "Steve Rodgers", 80]
 print(myList)
 
 # Adds an element onto the end of a List
-myList.append("Thor")
-myList.append("Thor")
-myList.append("Thor Nolan")
-# myList += ["Black Widow"]
+myList.append("Matt Murdock")
+myList.append("Danny Phantom")
+myList.append("Alfred")
+myList += ["Matt Murdock"]
 print(myList)
 
 # Returns the index of the first object with a matching value
-print(myList.index("Thor"))
+print(myList.index("Alfred"))
 
 # Changes a specified element within an List at the given index
 myList[3] = 85
@@ -20,7 +20,7 @@ print(myList)
 print(len(myList))
 
 # Removes a specified object from an List
-myList.remove("Thor")
+myList.remove("Matt Murdock")
 print(myList)
 
 # Removes the object at the index specified

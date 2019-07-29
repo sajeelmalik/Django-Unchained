@@ -1,7 +1,7 @@
 // Here is the equivalent Javascript for reference
 
-// Creates a variable with a string "Frankfurter"
-const title = "Frankfurter";
+// Creates a variable with a string "Kitkat eater"
+const title = "Kitkat eater";
 
 // Creates a variable with an integer 80
 const years = 80;
@@ -10,7 +10,7 @@ const years = 80;
 const expert_status = true;
 
 // Prints a statement adding the variable
-console.log("Nick is a professional " + title);
+console.log("Danny is a professional " + title);
 
 // Convert the integer years into a string and console.logs
 console.log("He has been coding for " + years + " years");

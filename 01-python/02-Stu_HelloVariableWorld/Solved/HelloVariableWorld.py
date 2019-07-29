@@ -8,7 +8,8 @@ country = "United States"
 age = 29
 
 # Create a variable called 'hourly_wage' that holds an integer
-hourly_wage = 1466195
+# James Harden's salary is 28.3 million. We've divided that by 82 games in the season and by 2.5 hours a game
+hourly_wage = 138049
 
 # Calculate the daily wage for the user (assuming that user works 8 hours a day)
 daily_wage = hourly_wage * 8

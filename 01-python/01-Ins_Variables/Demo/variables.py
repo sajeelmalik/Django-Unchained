@@ -8,8 +8,8 @@ It accounts for line breaks
 # variables in python, unlike javascript, do not need variable assignment
 # print() is equivalent to console.log()
 
-# Creates a variable with a string "Frankfurter"
-title = "Frankfurter"
+# Creates a variable with a string "Kitkat"
+title = "Kitkat eater"
 
 # Creates a variable with an integer 80
 years = 80
@@ -18,7 +18,7 @@ years = 80
 expert_status = True
 
 # Prints a statement adding the variable
-print("Nick is a professional " + title)
+print("Danny is a professional " + title)
 
 # Convert the integer years into a string and prints
 print("He has been coding for " + str(years) + " years")
